@@ -94,7 +94,7 @@ export default function PhotoSphere({
     }
 
     const id = globalThis.setTimeout(scheduleNext, warmup ? 120 : 280)
-      return () => globalThis.clearTimeout(id)
+    return () => globalThis.clearTimeout(id)
   }, [visibleCount, photos.length, preloadAll, batchSize, warmup])
 
   useEffect(() => {
