@@ -3,14 +3,20 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 const BGM_SRC = `${import.meta.env.BASE_URL}media/audio/pianai.mp3`
 
 /**
- * 在用户解锁（有手势）后播放 BGM。
- * 请自行将合法获得的音频放到 public/media/audio/pianai.mp3
+ * 解锁后播放 BGM。
+ * suspended=true（例如视频 lightbox）时暂停，结束后若未静音则恢复。
  */
-export function useBgm(enabled: boolean) {
+export function useBgm(enabled: boolean, suspended = false) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [playing, setPlaying] = useState(false)
   const [muted, setMuted] = useState(false)
   const [ready, setReady] = useState(false)
+  const mutedRef = useRef(false)
+  const wasPlayingBeforeSuspend = useRef(false)
+
+  useEffect(() => {
+    mutedRef.current = muted
+  }, [muted])
 
   useEffect(() => {
     const audio = new Audio(BGM_SRC)
@@ -39,14 +45,20 @@ export function useBgm(enabled: boolean) {
     const audio = audioRef.current
     if (!audio || !enabled) return
 
-    const tryPlay = () => {
-      void audio.play().catch(() => {
-        /* 个别浏览器仍拦截，等用户点右下角按钮 */
-      })
+    if (suspended) {
+      wasPlayingBeforeSuspend.current = !audio.paused && !mutedRef.current
+      audio.pause()
+      return
     }
 
-    tryPlay()
-  }, [enabled, ready])
+    if (mutedRef.current) return
+
+    const shouldResume = wasPlayingBeforeSuspend.current || ready
+    wasPlayingBeforeSuspend.current = false
+    if (shouldResume) {
+      void audio.play().catch(() => {})
+    }
+  }, [enabled, ready, suspended])
 
   useEffect(() => {
     const audio = audioRef.current
@@ -57,21 +69,14 @@ export function useBgm(enabled: boolean) {
   const toggleMute = useCallback(() => {
     const audio = audioRef.current
     if (!audio) return
-    if (!playing) {
-      void audio.play().catch(() => {})
-    }
-    setMuted((m) => !m)
-  }, [playing])
+    setMuted((m) => {
+      const next = !m
+      if (!next && !suspended) {
+        void audio.play().catch(() => {})
+      }
+      return next
+    })
+  }, [suspended])
 
-  const togglePlay = useCallback(() => {
-    const audio = audioRef.current
-    if (!audio) return
-    if (audio.paused) {
-      void audio.play().catch(() => {})
-    } else {
-      audio.pause()
-    }
-  }, [])
-
-  return { playing, muted, toggleMute, togglePlay, ready }
+  return { playing, muted, toggleMute, ready }
 }

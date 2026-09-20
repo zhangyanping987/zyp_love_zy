@@ -1,7 +1,7 @@
 interface LoadingOverlayProps {
   loaded: number
   failed: number
-  /** 进入动画所需就绪数量；进度条以此为准，而非全部图片 */
+  /** 全部就绪目标数量（含失败计入） */
   target: number
   isLoadingPhotos: boolean
   visible?: boolean
@@ -38,9 +38,10 @@ export default function LoadingOverlay({
                 style={{ width: `${percent}%` }}
               />
             </div>
-            {failed > 0 && (
-              <p className="mt-2 text-xs text-zinc-500">{failed} 张未能加载</p>
-            )}
+            <p className="mt-2 text-xs text-zinc-500">
+              {progress} / {goal}
+              {failed > 0 ? ` · ${failed} 张未能加载` : ''}
+            </p>
           </>
         )}
       </div>

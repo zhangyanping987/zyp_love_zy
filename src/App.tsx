@@ -1,8 +1,6 @@
 import { Suspense, lazy, useCallback, useEffect, useState } from 'react'
 import { loadPhotos, type Photo } from './data/photos'
-import { getIntroMinReady } from './constants/loading'
 import { useFullPhotoPreload } from './hooks/useFullPhotoPreload'
-import { usePerformance } from './context/PerformanceContext'
 import IntroOverlay from './components/IntroOverlay'
 import Lightbox from './components/Lightbox'
 import LoadingOverlay from './components/LoadingOverlay'
@@ -21,43 +19,7 @@ import type { ImageRect } from './utils/lightboxRect'
 
 const Scene = lazy(() => import('./components/Scene'))
 
-const LETTER_SEEN_KEY = 'zy-album-letter-seen'
-const UNLOCKED_KEY = 'zy-album-unlocked'
-
-function readLetterSeen() {
-  try {
-    return sessionStorage.getItem(LETTER_SEEN_KEY) === '1'
-  } catch {
-    return false
-  }
-}
-
-function markLetterSeen() {
-  try {
-    sessionStorage.setItem(LETTER_SEEN_KEY, '1')
-  } catch {
-    /* ignore */
-  }
-}
-
-function readUnlocked() {
-  try {
-    return sessionStorage.getItem(UNLOCKED_KEY) === '1'
-  } catch {
-    return false
-  }
-}
-
-function markUnlocked() {
-  try {
-    sessionStorage.setItem(UNLOCKED_KEY, '1')
-  } catch {
-    /* ignore */
-  }
-}
-
 export default function App() {
-  const { isMobile } = usePerformance()
   const [photos, setPhotos] = useState<Photo[]>([])
   const [isLoadingPhotos, setIsLoadingPhotos] = useState(true)
   const [loadError, setLoadError] = useState<string | null>(null)
@@ -74,10 +36,13 @@ export default function App() {
   const [viewTransitioning, setViewTransitioning] = useState(false)
   const [albumShape, setAlbumShape] = useState<AlbumShape>('sphere')
   const [faceFrontRequest, setFaceFrontRequest] = useState(0)
-  const [unlocked, setUnlocked] = useState(() => readUnlocked())
-  const [aboutOpen, setAboutOpen] = useState(() => readUnlocked() && !readLetterSeen())
-  const [letterDismissed, setLetterDismissed] = useState(() => readLetterSeen())
-  const { playing, muted, toggleMute } = useBgm(unlocked)
+  /** 每次刷新都要重新输入密码、再读信 */
+  const [unlocked, setUnlocked] = useState(false)
+  const [aboutOpen, setAboutOpen] = useState(false)
+  const [letterDismissed, setLetterDismissed] = useState(false)
+  const videoLightboxOpen =
+    lightboxIndex !== null && photos[lightboxIndex]?.kind === 'video'
+  const { playing, muted, toggleMute } = useBgm(unlocked, videoLightboxOpen)
 
   const toggleAlbumShape = useCallback(() => {
     setAlbumShape((s) => {
@@ -120,26 +85,23 @@ export default function App() {
   )
 
   const handleUnlock = useCallback(() => {
-    markUnlocked()
     setUnlocked(true)
-    if (!readLetterSeen()) {
-      setAboutOpen(true)
-    }
+    setAboutOpen(true)
   }, [])
 
   const handleAboutClose = useCallback(() => {
     setAboutOpen(false)
     if (!letterDismissed) {
-      markLetterSeen()
       setLetterDismissed(true)
     }
   }, [letterDismissed])
 
-  const introMinReady = getIntroMinReady(photos.length, isMobile)
   const readyCount = loaded + failed
+  const loadTarget = photos.length
 
+  /** 全部缩略图加载完成（含失败）后再结束进度条、开始进入动画 */
   const assetsReady =
-    !isLoadingPhotos && photos.length > 0 && readyCount >= introMinReady
+    !isLoadingPhotos && photos.length > 0 && readyCount >= loadTarget
 
   /** 读信期间后台挂载 3D（手机/桌面），分批加载缩略图 */
   const warmupScene = photos.length > 0 && !letterDismissed
@@ -223,7 +185,7 @@ export default function App() {
       <LoadingOverlay
         loaded={readyCount}
         failed={failed}
-        target={introMinReady}
+        target={Math.max(loadTarget, 1)}
         isLoadingPhotos={isLoadingPhotos}
         visible={letterDismissed && !assetsReady}
       />
