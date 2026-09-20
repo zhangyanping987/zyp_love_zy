@@ -2,12 +2,14 @@
   {
     "url": "media/images/01_maozi_01.webp",
     "title": "都说帽子歪歪戴 1/2",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/01_maozi_01.webp"
   },
   {
     "url": "media/images/01_maozi_02.webp",
     "title": "都说帽子歪歪戴 2/2",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/01_maozi_02.webp"
   },
   {
     "url": "media/posters/02_chao_wei.jpg",
@@ -19,202 +21,242 @@
   {
     "url": "media/images/03_zhixingli_01.webp",
     "title": "我的执行力 be like 1/4",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/03_zhixingli_01.webp"
   },
   {
     "url": "media/images/03_zhixingli_02.webp",
     "title": "我的执行力 be like 2/4",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/03_zhixingli_02.webp"
   },
   {
     "url": "media/images/03_zhixingli_03.webp",
     "title": "我的执行力 be like 3/4",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/03_zhixingli_03.webp"
   },
   {
     "url": "media/images/03_zhixingli_04.webp",
     "title": "我的执行力 be like 4/4",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/03_zhixingli_04.webp"
   },
   {
     "url": "media/images/04_duanfa_01.webp",
     "title": "短发时期 1/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_01.webp"
   },
   {
     "url": "media/images/04_duanfa_02.webp",
     "title": "短发时期 2/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_02.webp"
   },
   {
     "url": "media/images/04_duanfa_03.webp",
     "title": "短发时期 3/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_03.webp"
   },
   {
     "url": "media/images/04_duanfa_04.webp",
     "title": "短发时期 4/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_04.webp"
   },
   {
     "url": "media/images/04_duanfa_05.webp",
     "title": "短发时期 5/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_05.webp"
   },
   {
     "url": "media/images/04_duanfa_06.webp",
     "title": "短发时期 6/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_06.webp"
   },
   {
     "url": "media/images/04_duanfa_07.webp",
     "title": "短发时期 7/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_07.webp"
   },
   {
     "url": "media/images/04_duanfa_08.webp",
     "title": "短发时期 8/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_08.webp"
   },
   {
     "url": "media/images/04_duanfa_09.webp",
     "title": "短发时期 9/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_09.webp"
   },
   {
     "url": "media/images/04_duanfa_10.webp",
     "title": "短发时期 10/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_10.webp"
   },
   {
     "url": "media/images/04_duanfa_11.webp",
     "title": "短发时期 11/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_11.webp"
   },
   {
     "url": "media/images/04_duanfa_12.webp",
     "title": "短发时期 12/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_12.webp"
   },
   {
     "url": "media/images/04_duanfa_13.webp",
     "title": "短发时期 13/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_13.webp"
   },
   {
     "url": "media/images/04_duanfa_14.webp",
     "title": "短发时期 14/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_14.webp"
   },
   {
     "url": "media/images/04_duanfa_15.webp",
     "title": "短发时期 15/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_15.webp"
   },
   {
     "url": "media/images/04_duanfa_16.webp",
     "title": "短发时期 16/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_16.webp"
   },
   {
     "url": "media/images/04_duanfa_17.webp",
     "title": "短发时期 17/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_17.webp"
   },
   {
     "url": "media/images/04_duanfa_18.webp",
     "title": "短发时期 18/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_18.webp"
   },
   {
     "url": "media/images/04_duanfa_19.webp",
     "title": "短发时期 19/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_19.webp"
   },
   {
     "url": "media/images/04_duanfa_20.webp",
     "title": "短发时期 20/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_20.webp"
   },
   {
     "url": "media/images/04_duanfa_21.webp",
     "title": "短发时期 21/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_21.webp"
   },
   {
     "url": "media/images/04_duanfa_22.webp",
     "title": "短发时期 22/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_22.webp"
   },
   {
     "url": "media/images/04_duanfa_23.webp",
     "title": "短发时期 23/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_23.webp"
   },
   {
     "url": "media/images/04_duanfa_24.webp",
     "title": "短发时期 24/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_24.webp"
   },
   {
     "url": "media/images/04_duanfa_25.webp",
     "title": "短发时期 25/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_25.webp"
   },
   {
     "url": "media/images/04_duanfa_26.webp",
     "title": "短发时期 26/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_26.webp"
   },
   {
     "url": "media/images/04_duanfa_27.webp",
     "title": "短发时期 27/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_27.webp"
   },
   {
     "url": "media/images/04_duanfa_28.webp",
     "title": "短发时期 28/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_28.webp"
   },
   {
     "url": "media/images/04_duanfa_29.webp",
     "title": "短发时期 29/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_29.webp"
   },
   {
     "url": "media/images/04_duanfa_30.webp",
     "title": "短发时期 30/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_30.webp"
   },
   {
     "url": "media/images/04_duanfa_31.webp",
     "title": "短发时期 31/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_31.webp"
   },
   {
     "url": "media/images/04_duanfa_32.webp",
     "title": "短发时期 32/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_32.webp"
   },
   {
     "url": "media/images/04_duanfa_33.webp",
     "title": "短发时期 33/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_33.webp"
   },
   {
     "url": "media/images/04_duanfa_34.webp",
     "title": "短发时期 34/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_34.webp"
   },
   {
     "url": "media/images/04_duanfa_35.webp",
     "title": "短发时期 35/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_35.webp"
   },
   {
     "url": "media/images/04_duanfa_36.webp",
     "title": "短发时期 36/36",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/04_duanfa_36.webp"
   },
   {
     "url": "media/posters/05_tongse.jpg",
@@ -233,12 +275,14 @@
   {
     "url": "media/images/07_hongmao_01.webp",
     "title": "你的笑容像是我昨晚的 moonlight 1/2",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/07_hongmao_01.webp"
   },
   {
     "url": "media/images/07_hongmao_02.webp",
     "title": "你的笑容像是我昨晚的 moonlight 2/2",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/07_hongmao_02.webp"
   },
   {
     "url": "media/posters/08_nvshen_vx.jpg",
@@ -257,7 +301,8 @@
   {
     "url": "media/images/10_xieliuhai_01.webp",
     "title": "为什么不点赞",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/10_xieliuhai_01.webp"
   },
   {
     "url": "media/posters/wx_20260920_2fb9fcb396b6.jpg",
@@ -304,7 +349,8 @@
   {
     "url": "media/images/wx_20260920_91403b3e437c.jpg",
     "title": "微信 图片 17:18",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_91403b3e437c.webp"
   },
   {
     "url": "media/posters/wx_20260920_a0e068f97f75.jpg",
@@ -351,7 +397,8 @@
   {
     "url": "media/images/wx_20260920_bcad0ff29af2.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_bcad0ff29af2.webp"
   },
   {
     "url": "media/posters/wx_20260920_ce511d2389d0.jpg",
@@ -398,246 +445,295 @@
   {
     "url": "media/images/wx_20260920_0d8ee61f3e44.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_0d8ee61f3e44.webp"
   },
   {
     "url": "media/images/wx_20260920_13101f51f2ec.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_13101f51f2ec.webp"
   },
   {
     "url": "media/images/wx_20260920_1417270ffb42.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_1417270ffb42.webp"
   },
   {
     "url": "media/images/wx_20260920_14af778679ca.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_14af778679ca.webp"
   },
   {
     "url": "media/images/wx_20260920_16332a389833.jpg",
     "title": "微信 图片 17:29",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_16332a389833.webp"
   },
   {
     "url": "media/images/wx_20260920_1a2e15964aa9.jpg",
     "title": "微信 图片 17:29",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_1a2e15964aa9.webp"
   },
   {
     "url": "media/images/wx_20260920_25ff03646bf5.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_25ff03646bf5.webp"
   },
   {
     "url": "media/images/wx_20260920_306447f0727e.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_306447f0727e.webp"
   },
   {
     "url": "media/images/wx_20260920_32b9409baaac.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_32b9409baaac.webp"
   },
   {
     "url": "media/images/wx_20260920_33a7a701f70b.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_33a7a701f70b.webp"
   },
   {
     "url": "media/images/wx_20260920_390fb2710b00.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_390fb2710b00.webp"
   },
   {
     "url": "media/images/wx_20260920_3cf1a467942a.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_3cf1a467942a.webp"
   },
   {
     "url": "media/images/wx_20260920_3df6ae73794d.jpg",
     "title": "微信 图片 17:20",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_3df6ae73794d.webp"
   },
   {
     "url": "media/images/wx_20260920_3f5082faa726.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_3f5082faa726.webp"
   },
   {
     "url": "media/images/wx_20260920_41eeff527f44.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_41eeff527f44.webp"
   },
   {
     "url": "media/images/wx_20260920_4a53dad9def4.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_4a53dad9def4.webp"
   },
   {
     "url": "media/images/wx_20260920_4e8c3dfc9b5d.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_4e8c3dfc9b5d.webp"
   },
   {
     "url": "media/images/wx_20260920_4fea95d50903.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_4fea95d50903.webp"
   },
   {
     "url": "media/images/wx_20260920_562e9ccc67e8.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_562e9ccc67e8.webp"
   },
   {
     "url": "media/images/wx_20260920_5be96b2dae2b.jpg",
     "title": "微信 图片 17:20",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_5be96b2dae2b.webp"
   },
   {
     "url": "media/images/wx_20260920_6810de3f3bf3.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_6810de3f3bf3.webp"
   },
   {
     "url": "media/images/wx_20260920_6dc75a12eba8.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_6dc75a12eba8.webp"
   },
   {
     "url": "media/images/wx_20260920_6f1828b04641.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_6f1828b04641.webp"
   },
   {
     "url": "media/images/wx_20260920_72faa6ce94dc.jpg",
     "title": "微信 图片 17:29",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_72faa6ce94dc.webp"
   },
   {
     "url": "media/images/wx_20260920_763b93616773.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_763b93616773.webp"
   },
   {
     "url": "media/images/wx_20260920_77bb3bb9ed29.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_77bb3bb9ed29.webp"
   },
   {
     "url": "media/images/wx_20260920_963d4e3223df.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_963d4e3223df.webp"
   },
   {
     "url": "media/images/wx_20260920_9cc85f706d5c.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_9cc85f706d5c.webp"
   },
   {
     "url": "media/images/wx_20260920_9da1d9804cfd.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_9da1d9804cfd.webp"
   },
   {
     "url": "media/images/wx_20260920_9f7b7297bd86.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_9f7b7297bd86.webp"
   },
   {
     "url": "media/images/wx_20260920_a70624a7fff1.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_a70624a7fff1.webp"
   },
   {
     "url": "media/images/wx_20260920_a7cf012568a0.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_a7cf012568a0.webp"
   },
   {
     "url": "media/images/wx_20260920_add120a2579f.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_add120a2579f.webp"
   },
   {
     "url": "media/images/wx_20260920_b1306f585dbe.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_b1306f585dbe.webp"
   },
   {
     "url": "media/images/wx_20260920_b51440af37e5.jpg",
     "title": "微信 图片 17:20",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_b51440af37e5.webp"
   },
   {
     "url": "media/images/wx_20260920_b72c8ae40f0f.jpg",
     "title": "微信 图片 17:20",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_b72c8ae40f0f.webp"
   },
   {
     "url": "media/images/wx_20260920_c305f616275a.jpg",
     "title": "微信 图片 17:28",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_c305f616275a.webp"
   },
   {
     "url": "media/images/wx_20260920_c37620519e33.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_c37620519e33.webp"
   },
   {
     "url": "media/images/wx_20260920_c53d7623004f.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_c53d7623004f.webp"
   },
   {
     "url": "media/images/wx_20260920_c78a6eebb2ee.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_c78a6eebb2ee.webp"
   },
   {
     "url": "media/images/wx_20260920_d9a4e82f793a.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_d9a4e82f793a.webp"
   },
   {
     "url": "media/images/wx_20260920_dcad341e9682.jpg",
     "title": "微信 图片 17:26",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_dcad341e9682.webp"
   },
   {
     "url": "media/images/wx_20260920_de760c1ae4dd.jpg",
     "title": "微信 图片 17:28",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_de760c1ae4dd.webp"
   },
   {
     "url": "media/images/wx_20260920_e44e78585fdb.jpg",
     "title": "微信 图片 17:19",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_e44e78585fdb.webp"
   },
   {
     "url": "media/images/wx_20260920_efc82e00adbd.jpg",
     "title": "微信 图片 17:20",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_efc82e00adbd.webp"
   },
   {
     "url": "media/images/wx_20260920_f02fb29353ba.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_f02fb29353ba.webp"
   },
   {
     "url": "media/images/wx_20260920_f4a4adc9bb4b.jpg",
     "title": "微信 图片 17:27",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_f4a4adc9bb4b.webp"
   },
   {
     "url": "media/images/wx_20260920_f5dc66525ecb.jpg",
     "title": "微信 图片 17:30",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_f5dc66525ecb.webp"
   },
   {
     "url": "media/images/wx_20260920_f8c282d1c847.jpg",
     "title": "微信 图片 17:28",
-    "kind": "image"
+    "kind": "image",
+    "thumbUrl": "media/thumbs/wx_20260920_f8c282d1c847.webp"
   }
 ]

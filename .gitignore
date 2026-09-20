@@ -5,3 +5,4 @@ dist
 urls.txt
 .DS_Store
 *.local
+.env.oss*

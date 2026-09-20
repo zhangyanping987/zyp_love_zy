@@ -1,4 +1,4 @@
-import { Suspense, lazy, useCallback, useEffect, useState } from 'react'
+import { Suspense, lazy, useCallback, useEffect, useMemo, useState } from 'react'
 import { loadPhotos, type Photo } from './data/photos'
 import { useFullPhotoPreload } from './hooks/useFullPhotoPreload'
 import IntroOverlay from './components/IntroOverlay'
@@ -13,6 +13,7 @@ import AboutButton from './components/AboutButton'
 import PasswordGate from './components/PasswordGate'
 import BgmToggle from './components/BgmToggle'
 import { useBgm } from './hooks/useBgm'
+import { getIntroMinReady } from './constants/loading'
 import type { ViewMode } from './context/ViewModeContext'
 import type { AlbumShape } from './types/albumShape'
 import type { ImageRect } from './utils/lightboxRect'
@@ -42,7 +43,12 @@ export default function App() {
   const [letterDismissed, setLetterDismissed] = useState(false)
   const videoLightboxOpen =
     lightboxIndex !== null && photos[lightboxIndex]?.kind === 'video'
-  const { playing, muted, toggleMute } = useBgm(unlocked, videoLightboxOpen)
+  const isMobile = useMemo(
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(max-width: 768px), (pointer: coarse)').matches,
+    [],
+  )
 
   const toggleAlbumShape = useCallback(() => {
     setAlbumShape((s) => {
@@ -97,16 +103,23 @@ export default function App() {
   }, [letterDismissed])
 
   const readyCount = loaded + failed
-  const loadTarget = photos.length
+  const introTarget =
+    photos.length > 0 ? getIntroMinReady(photos.length, isMobile) : 1
 
-  /** 全部缩略图加载完成（含失败）后再结束进度条、开始进入动画 */
+  /** 够首屏张数即可开场，其余在进入动画期间继续加载 */
   const assetsReady =
-    !isLoadingPhotos && photos.length > 0 && readyCount >= loadTarget
+    !isLoadingPhotos && photos.length > 0 && readyCount >= introTarget
 
   /** 读信期间后台挂载 3D（手机/桌面），分批加载缩略图 */
   const warmupScene = photos.length > 0 && !letterDismissed
   const mountScene = photos.length > 0
   const sceneVisible = letterDismissed
+
+  /** 等首批缩略图就绪后再拉 BGM，避免和球图抢带宽 */
+  const { playing, muted, toggleMute } = useBgm(
+    unlocked && assetsReady,
+    videoLightboxOpen,
+  )
 
   useFullPhotoPreload({
     photos,
@@ -185,7 +198,7 @@ export default function App() {
       <LoadingOverlay
         loaded={readyCount}
         failed={failed}
-        target={Math.max(loadTarget, 1)}
+        target={introTarget}
         isLoadingPhotos={isLoadingPhotos}
         visible={letterDismissed && !assetsReady}
       />

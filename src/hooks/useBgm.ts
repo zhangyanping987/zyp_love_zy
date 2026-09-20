@@ -4,7 +4,7 @@ import { resolveAsset } from '../config/assets'
 const BGM_SRC = resolveAsset('media/audio/pianai.mp3')
 
 /**
- * 解锁后播放 BGM。
+ * enabled 为 true 时才创建 Audio 并开始下载（避免与首批缩略图抢带宽）。
  * suspended=true（例如视频 lightbox）时暂停，结束后若未静音则恢复。
  */
 export function useBgm(enabled: boolean, suspended = false) {
@@ -20,6 +20,8 @@ export function useBgm(enabled: boolean, suspended = false) {
   }, [muted])
 
   useEffect(() => {
+    if (!enabled) return
+
     const audio = new Audio(BGM_SRC)
     audio.loop = true
     audio.preload = 'auto'
@@ -39,8 +41,10 @@ export function useBgm(enabled: boolean, suspended = false) {
       audio.removeEventListener('play', onPlay)
       audio.removeEventListener('pause', onPause)
       audioRef.current = null
+      setReady(false)
+      setPlaying(false)
     }
-  }, [])
+  }, [enabled])
 
   useEffect(() => {
     const audio = audioRef.current

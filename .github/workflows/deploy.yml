@@ -26,10 +26,14 @@ jobs:
           cache: npm
 
       - run: npm ci
-      # 页面走 GitHub Pages；图片/视频/BGM 走阿里云 OSS（桶域名不当网站打开）
+      # 大图/视频/BGM → OSS；thumbs/posters 留在 Pages 加速首屏
+      # 华东桶就绪后改为 zyp-love-zy-hz.oss-cn-hangzhou.aliyuncs.com
       - run: npm run build
         env:
           VITE_ASSET_BASE: https://zyp-love-zy.oss-cn-hongkong.aliyuncs.com/
+      - run: |
+          rm -rf dist/media/images dist/media/videos dist/media/audio
+          # 保留 media/thumbs、media/posters
 
       - uses: actions/upload-pages-artifact@v3
         with:
