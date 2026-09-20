@@ -13,6 +13,8 @@ import ShapeToggle from './components/ShapeToggle'
 import AboutPanel from './components/AboutPanel'
 import AboutButton from './components/AboutButton'
 import PasswordGate from './components/PasswordGate'
+import BgmToggle from './components/BgmToggle'
+import { useBgm } from './hooks/useBgm'
 import type { ViewMode } from './context/ViewModeContext'
 import type { AlbumShape } from './types/albumShape'
 import type { ImageRect } from './utils/lightboxRect'
@@ -75,6 +77,7 @@ export default function App() {
   const [unlocked, setUnlocked] = useState(() => readUnlocked())
   const [aboutOpen, setAboutOpen] = useState(() => readUnlocked() && !readLetterSeen())
   const [letterDismissed, setLetterDismissed] = useState(() => readLetterSeen())
+  const { playing, muted, toggleMute } = useBgm(unlocked)
 
   const toggleAlbumShape = useCallback(() => {
     setAlbumShape((s) => {
@@ -226,6 +229,12 @@ export default function App() {
       />
 
       <IntroOverlay visible={introVisible} progress={introProgress} />
+
+      {unlocked && (
+        <div className="pointer-events-none absolute left-4 top-4 z-20 sm:left-6 sm:top-6">
+          <BgmToggle muted={muted} playing={playing} onToggleMute={toggleMute} />
+        </div>
+      )}
 
       {introDone && lightboxIndex === null && (
         <>
