@@ -17,7 +17,8 @@ interface PhotoNodeProps {
   onError: () => void
 }
 
-const LOAD_TIMEOUT_MS = 15000
+const LOAD_TIMEOUT_MS = 60000
+const MAX_ATTEMPTS = 3
 
 export default function PhotoNode({
   photo,
@@ -28,12 +29,12 @@ export default function PhotoNode({
   onLoad,
   onError,
 }: PhotoNodeProps) {
-
   const { active: introActive, progress, done: introDone } = useIntro()
   const { isMobile } = usePerformance()
   const [hovered, setHovered] = useState(false)
   const [failed, setFailed] = useState(false)
   const [loaded, setLoaded] = useState(false)
+  const [attempt, setAttempt] = useState(0)
   const settled = useRef(false)
   const tapStart = useRef({ x: 0, y: 0, time: 0 })
 
@@ -49,25 +50,33 @@ export default function PhotoNode({
         : 0
     : 0
 
+  const thumbSrc = getPhotoThumbSrc(photo)
+  const srcWithBust =
+    attempt === 0 ? thumbSrc : `${thumbSrc}${thumbSrc.includes('?') ? '&' : '?'}retry=${attempt}`
+
   useEffect(() => {
     settled.current = false
     setLoaded(false)
     setFailed(false)
+    setAttempt(0)
   }, [photo.url, photo.thumbUrl])
 
   useEffect(() => {
     if (loaded || failed) return
 
     const timer = window.setTimeout(() => {
-      if (!settled.current) {
-        settled.current = true
-        setFailed(true)
-        onError()
+      if (settled.current) return
+      if (attempt + 1 < MAX_ATTEMPTS) {
+        setAttempt((a) => a + 1)
+        return
       }
+      settled.current = true
+      setFailed(true)
+      onError()
     }, LOAD_TIMEOUT_MS)
 
     return () => window.clearTimeout(timer)
-  }, [loaded, failed, photo.url, onError])
+  }, [loaded, failed, photo.url, onError, attempt])
 
   const markLoaded = () => {
     if (settled.current) return
@@ -78,6 +87,10 @@ export default function PhotoNode({
 
   const markFailed = () => {
     if (settled.current) return
+    if (attempt + 1 < MAX_ATTEMPTS) {
+      setAttempt((a) => a + 1)
+      return
+    }
     settled.current = true
     setFailed(true)
     onError()
@@ -140,10 +153,11 @@ export default function PhotoNode({
             </div>
           ) : (
             <img
-              src={getPhotoThumbSrc(photo)}
+              key={srcWithBust}
+              src={srcWithBust}
               alt={photo.title}
-              loading="eager"
-              referrerPolicy="no-referrer"
+              loading={photoIndex < 36 ? 'eager' : 'lazy'}
+              decoding="async"
               draggable={false}
               className="rounded-lg object-cover shadow-lg shadow-black/50 ring-1 ring-white/10"
               style={{

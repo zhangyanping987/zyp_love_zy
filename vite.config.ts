@@ -3,8 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // 相对路径：本地、Nginx 子目录、GitHub Pages 都能直接打开
-  base: './',
+  // GitHub Pages 项目站：绝对路径，避免无尾斜杠时 ./media 解析到错误域名路径
+  base: '/zyp_love_zy/',
   build: {
     rollupOptions: {
       output: {

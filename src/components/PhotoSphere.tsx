@@ -12,8 +12,8 @@ import FacingCenter from './FacingCenter'
 import PhotoNode from './PhotoNode'
 
 const SHAPE_SCALE = ALBUM_SHAPE_SCALE
-const BATCH_SIZE = 30
-const WARMUP_BATCH_SIZE = 12
+const BATCH_SIZE = 18
+const WARMUP_BATCH_SIZE = 8
 
 function layoutPhotos(count: number, shape: AlbumShape) {
   return shape === 'heart'
@@ -93,8 +93,8 @@ export default function PhotoSphere({
       return () => window.cancelIdleCallback(id)
     }
 
-    const id = globalThis.setTimeout(scheduleNext, warmup ? 60 : 100)
-    return () => globalThis.clearTimeout(id)
+    const id = globalThis.setTimeout(scheduleNext, warmup ? 120 : 280)
+      return () => globalThis.clearTimeout(id)
   }, [visibleCount, photos.length, preloadAll, batchSize, warmup])
 
   useEffect(() => {

@@ -3,7 +3,8 @@ import type { Photo } from '../data/photos'
 import { getPhotoThumbSrc } from '../utils/photoUrls'
 import { PRELOAD_CONCURRENCY } from '../constants/loading'
 
-const LOAD_TIMEOUT_MS = 15000
+const LOAD_TIMEOUT_MS = 60000
+const MAX_ATTEMPTS = 3
 
 interface UsePhotoPreloadOptions {
   photos: Photo[]
@@ -11,19 +12,29 @@ interface UsePhotoPreloadOptions {
   onProgress: (loaded: number, failed: number, total: number) => void
 }
 
-function loadImage(url: string): Promise<'ok' | 'fail'> {
+function loadImage(url: string, attempt = 0): Promise<'ok' | 'fail'> {
   return new Promise((resolve) => {
     const img = new Image()
-    const timer = window.setTimeout(() => resolve('fail'), LOAD_TIMEOUT_MS)
+    const timer = window.setTimeout(() => {
+      if (attempt + 1 < MAX_ATTEMPTS) {
+        void loadImage(url, attempt + 1).then(resolve)
+      } else {
+        resolve('fail')
+      }
+    }, LOAD_TIMEOUT_MS)
 
     const finish = (result: 'ok' | 'fail') => {
       window.clearTimeout(timer)
+      if (result === 'fail' && attempt + 1 < MAX_ATTEMPTS) {
+        void loadImage(url, attempt + 1).then(resolve)
+        return
+      }
       resolve(result)
     }
 
     img.onload = () => finish('ok')
     img.onerror = () => finish('fail')
-    img.src = url
+    img.src = attempt === 0 ? url : `${url}${url.includes('?') ? '&' : '?'}retry=${attempt}`
   })
 }
 

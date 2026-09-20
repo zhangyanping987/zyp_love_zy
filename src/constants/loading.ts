@@ -4,8 +4,8 @@ export const INTRO_MIN_READY = {
   desktop: 30,
 } as const
 
-/** 读信期间并发预加载图片数（避免 150 张同时抢带宽） */
-export const PRELOAD_CONCURRENCY = 6
+/** 读信期间并发预加载图片数（避免一百多张同时抢带宽） */
+export const PRELOAD_CONCURRENCY = 4
 
 export function getIntroMinReady(total: number, isMobile: boolean): number {
   const min = isMobile ? INTRO_MIN_READY.mobile : INTRO_MIN_READY.desktop
