@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { resolveAsset } from '../config/assets'
 
-const BGM_SRC = `${import.meta.env.BASE_URL}media/audio/pianai.mp3`
+const BGM_SRC = resolveAsset('media/audio/pianai.mp3')
 
 /**
  * 解锁后播放 BGM。

@@ -1,16 +1,11 @@
+import { resolveAsset } from '../config/assets'
+
 export interface Photo {
   url: string
   title: string
   thumbUrl?: string
   kind?: 'image' | 'video'
   videoUrl?: string
-}
-
-function resolveAsset(path: string): string {
-  const trimmed = path.trim()
-  if (!trimmed || /^(https?:|data:|blob:)/.test(trimmed)) return trimmed
-  const base = import.meta.env.BASE_URL
-  return `${base}${trimmed.replace(/^\//, '')}`
 }
 
 export async function loadPhotos(): Promise<Photo[]> {

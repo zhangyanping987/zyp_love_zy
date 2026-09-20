@@ -26,7 +26,10 @@ jobs:
           cache: npm
 
       - run: npm ci
+      # 页面走 GitHub Pages；图片/视频/BGM 走阿里云 OSS（桶域名不当网站打开）
       - run: npm run build
+        env:
+          VITE_ASSET_BASE: https://zyp-love-zy.oss-cn-hongkong.aliyuncs.com/
 
       - uses: actions/upload-pages-artifact@v3
         with:

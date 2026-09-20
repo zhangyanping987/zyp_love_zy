@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // GitHub Pages 项目站：绝对路径，避免无尾斜杠时 ./media 解析到错误域名路径
+  // GitHub Pages 项目站路径；媒体可通过 VITE_ASSET_BASE 指向阿里云 OSS
   base: '/zyp_love_zy/',
   build: {
     rollupOptions: {
